@@ -7,29 +7,32 @@
 
 
 2. Analysis Workflow
-Step 1: Data Filtering & Selection
+**Step 1**: Data Filtering & Selection
 - Target Area: 몽골 울란바토르 60번 학교 (School No. 60, Ulaanbaatar, Mongolia) 주변 농지
 - Satellite: Sentinel-2 (ESA)
 - Process: 구름의 영향을 최소화한 최신 위성 데이터를 필터링하여 분석에 적합한 영상 확보 (구름 10% 아래조건으로 필터링)
 
 
-Step 2: Data Pre-processing
+**Step 2**: Data Pre-processing
 - Bands Used: Red Band (B04), NIR Band (B08)
 - Format: .jp2 (JPEG 2000) 위성 원본 데이터 로딩 및 행렬(Array) 변환
 
-Step 3: 
+**Step 3**: 
 - NDVI Calculation식물의 광합성 활성도를 정량화하기 위해 다음 수식을 적용하였습니다.
 <img width="219" height="69" alt="image" src="https://github.com/user-attachments/assets/2ebfc82f-390e-4949-bc58-79ed0b3b3296" />
 - Rasterio와 NumPy를 활용하여 수천만 개의 픽셀 연산을 수행하였습니다.
 
 
 3. Results
-데이터 필터링 (Area of Interest)
+
+**데이터 필터링 (Area of Interest)**
+
 <img width="1912" height="902" alt="image" src="https://github.com/user-attachments/assets/4fd0ec79-69ae-4e65-aad3-4a72297844d3" />
 <img width="1919" height="915" alt="몽골 울란바토르 60번학교 필터링 다운로드 과정" src="https://github.com/user-attachments/assets/66f6e353-2a5c-42e3-ab62-848b3236dcea" />
 
 
-분석 결과 (NDVI Heatmap)
+**분석 결과 (NDVI Heatmap)**
+
 <img width="1196" height="997" alt="몽골 울란바토르 60번학교 부근 NDVI 결과값" src="https://github.com/user-attachments/assets/bb3f03a0-02c6-481e-8f3f-173d26009904" />
 
 
